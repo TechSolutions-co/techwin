@@ -11,18 +11,55 @@
             text-align: center;
             padding: 50px;
         }
+
         h1 {
             color: #ff4d79;
         }
+
         p {
             font-size: 20px;
             color: #333;
+        }
+
+        /* Estilos para el botón */
+        button {
+            background-color: #ff4d79; /* Color de fondo del botón */
+            color: white;              /* Color del texto */
+            padding: 10px 20px;        /* Espaciado dentro del botón */
+            border: none;              /* Eliminar borde */
+            border-radius: 25px;       /* Bordes redondeados */
+            font-size: 16px;           /* Tamaño de texto */
+            cursor: pointer;          /* Mostrar mano al pasar el cursor */
+            transition: background-color 0.3s; /* Transición suave al cambiar el color */
+        }
+
+        /* Cambiar el color del botón cuando se pasa el mouse */
+        button:hover {
+            background-color: #ff1a4f;
         }
     </style>
 </head>
 <body>
     <h1>Hola, hermosa 💕</h1>
-    <p>Esta página es solo para ti. Eres mi persona favorita en el mundo. ✨</p>
+    <p id="mensaje">Esta página es solo para ti. Eres mi persona favorita en el mundo. ✨</p>
+
+    <!-- Aquí agregamos el botón -->
+    <button onclick="cambiarMensaje()">Haz clic aquí 💖</button>
+
+    <!-- Código JavaScript para cambiar el mensaje -->
+    <script>
+        function cambiarMensaje() {
+            let mensajes = [
+                "Eres la persona más increíble que conozco. 💕",
+                "Tu sonrisa es lo mas hermoso. ✨",
+                "Cada momento contigo es especial. ❤️",
+                "Te quiero más de lo que las palabras pueden expresar. 🥰"
+                "Me encanta cuando me besas  y sonries."
+            ];
+            let mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
+            document.getElementById("mensaje").innerText = mensajeAleatorio;
+        }
+    </script>
 </body>
 </html>
-                                                                
+
